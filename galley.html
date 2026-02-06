@@ -503,8 +503,36 @@
         setTimeout(() => item.classList.add('visible'), 200);
       });
     }, 300);
+
+        // Navbar COde 
+const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   </script>
 
     <script src="script.js"></script>
 </body>
+
 </html>
