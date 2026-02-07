@@ -190,6 +190,7 @@ body {
     align-items: center;
     color: white;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 .hero-content {
@@ -1842,4 +1843,5 @@ h1 {
       .footer-links a:hover {
         transform: none;
       }
+
     }
